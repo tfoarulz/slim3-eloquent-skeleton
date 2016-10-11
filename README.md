@@ -1,18 +1,19 @@
 # Slim 3 Skeleton
 
-This is a simple skeleton project fork from akrabat/slim3-skeleton that includes scaffold tool, migrations,auth,Twig, Flash messages, eloquent ORM and Monolog.
+This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akrabat/slim3-skeleton that includes scaffold tool, migrations, auth, Twig, Flash messages, eloquent ORM and Monolog.
 
 ## Create your project:
 
-    $ composer create-project -n -s dev mrcoco/slim3-eloquent-skeleton my-app
+    $ composer create-project -n -s dev tfoarulz/slim3-eloquent-skeleton my-app
 
 ### Run it:
 
 1. `$ cd my-app`
-2. Change database setting `app\setting.php`
-3. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
-4. `$ php -S 0.0.0.0:8888 -t public public/index.php`
-5. Browse to http://localhost:8888
+2. `$ cp app\settings.php.dist app\settings'
+3. Change database setting `app\settings.php`
+4. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
+5. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+6. Browse to http://localhost:8888
 
 ## Key directories
 
@@ -43,7 +44,7 @@ This is a simple skeleton project fork from akrabat/slim3-skeleton that includes
 
 
 ## Migration
-*  migrate all data
+* Migrate all data
 * php cli.php migrate
 
 * Confirmation of status
