@@ -33,5 +33,6 @@
         "post-update-cmd": [
             "php cli.php migrate"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
