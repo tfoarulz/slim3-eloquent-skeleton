@@ -9,11 +9,12 @@ This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akr
 ### Run it:
 
 1. `$ cd my-app`
-2. `$ cp app\settings.php.dist app\settings'
-3. Change database setting `app\settings.php`
-4. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
-5. `$ php -S 0.0.0.0:8888 -t public public/index.php`
-6. Browse to http://localhost:8888
+2. `$ mkdir -m 1777 cache log`
+3. `$ cp app\settings.php.dist app\settings'
+4. Change database setting in `app\settings.php`
+5. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
+6. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+7. Browse to http://localhost:8888
 
 ## Key directories
 
