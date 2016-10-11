@@ -2,17 +2,16 @@
 
 This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akrabat/slim3-skeleton that includes scaffold tool, migrations, auth, Twig, Flash messages, eloquent ORM and Monolog.
 
-## Create your project:
+## Installation:
 
-    $ composer create-project -n -s dev tfoarulz/slim3-eloquent-skeleton my-app
+1. `$ git clone https://github.com/tfoarulz/slim3-eloquent-skeleton my-app`
+2. `$ cd my-app`
+3. `$ cp app/settings.php.dist app/settings.php`
 
-### Run it:
+Now, you need to create a database for this project and change the database setting in `app/settings.php`
 
-1. `$ cd my-app`
-2. `$ mkdir -m 1777 cache log`
-3. `$ cp app\settings.php.dist app\settings'
-4. Change database setting in `app\settings.php`
-5. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
+4. `$ composer install`
+5. `$ mkdir -m 1777 cache log`
 6. `$ php -S 0.0.0.0:8888 -t public public/index.php`
 7. Browse to http://localhost:8888
 
