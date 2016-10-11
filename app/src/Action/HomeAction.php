@@ -46,11 +46,13 @@ final class HomeAction
 
     public function dashboard(Request $request, Response $response, $args)
     {
+        $this->logger->info("loading dashboard");
         $flash = $this->session->get('flash');
         $user = ['username' => $this->auth['session'],
                  'usergroup' => $this->auth['group']];
 
-        return $this->view->render($response, 'dashboard.twig', ['flash' => $flash, 'user' => $user]);
+        //return $this->view->render($response, 'dashboard.twig', ['flash' => $flash, 'user' => $user]);
+        return $this->view->render($response, './backend/views/home.twig', ['flash' => $flash, 'user' => $user]);
     }
 
     public function logout(Request $request, Response $response, $args)
