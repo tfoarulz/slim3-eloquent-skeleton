@@ -10,5 +10,5 @@ $app->post('/login','App\Action\HomeAction:loginPost')->setName('login.post');
 $app->post('/register','App\Action\HomeAction:registerPost')->setName('register.post');
 $route = App\Model\Route::all();
 foreach ($route as $rt) {
-	$app->get('/'.$rt->route,$rt->address)->setName($rt->route);
+    $app->get('/' . $rt->route , $rt->address)->setName($rt->route);
 }

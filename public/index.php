@@ -16,6 +16,27 @@ session_start();
 $settings = require __DIR__ . '/../app/settings.php';
 $app = new \Slim\App($settings);
 
+// slimwhoops
+use Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware;
+if ($app->getContainer()->settings['debug'] === false) {
+    $container['errorHandler'] = function ($c) {
+        return function ($request, $response, $exception) use ($c) {
+            $data = [
+                'code' => $exception->getCode(),
+                'message' => $exception->getMessage(),
+                'file' => $exception->getFile(),
+                'line' => $exception->getLine(),
+                'trace' => explode("\n", $exception->getTraceAsString()),
+            ];
+            return $c->get('response')->withStatus(500)
+                    ->withHeader('Content-Type', 'application/json')
+                    ->write(json_encode($data));
+        };
+    };
+}else{
+    $app->add(new WhoopsMiddleware);
+}
+
 // Set up dependencies
 require __DIR__ . '/../app/dependencies.php';
 

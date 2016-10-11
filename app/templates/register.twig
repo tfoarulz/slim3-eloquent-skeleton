@@ -1,26 +1,50 @@
-{% if flash %}{{ flash }}{% endif %}
-<form action="register" method="post" autocomplete="off">
-        <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email"{% if request.post('email') %}value="{{ request.post('email') }}"{% endif %}>
-            {% if errors.first('email') %}{{ errors.first('email') }}{% endif %}
+{% extends 'layout.twig' %}
+
+{% set title = 'Register ' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<h3>{{ title }}</h3>
+
+{% if flash %}
+<div class="alert alert-danger">{{ flash }}</div>
+{% endif %}
+
+<form class="form-horizontal" action="register" method="post" autocomplete="off">
+    <div class="form-group{% if errors.first('email') %} has-error{% endif %}">
+        <label for="email" class="col-xs-2 control-label">Email</label>
+        <div class="col-xs-10">
+            <input class="form-control" type="text" name="email" id="email" {% if email %}value="{{ email }}"{% endif %}>
+            {% if errors.first('email') %}<span class="label label-danger">{{ errors.first('email') }}</span>{% endif %}
         </div>
-        <div>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username"{% if request.post('username') %}value="{{ request.post('username') }}"{% endif %}>
-            {% if errors.first('username') %}{{ errors.first('username') }}{% endif %}
+    </div>
+    <div class="form-group{% if errors.first('username') %} has-error{% endif %}">
+        <label for="username" class="col-xs-2 control-label">Username</label>
+        <div class="col-xs-10">
+            <input class="form-control" type="text" name="username" id="username"{% if username %}value="{{ username }}"{% endif %}>
+            {% if errors.first('username') %}<span class="label label-danger">{{ errors.first('username') }}</span>{% endif %}
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            {% if errors.first('password') %}{{ errors.first('password') }}{% endif %}
+    </div>
+    <div class="form-group{% if errors.first('password') %} has-error{% endif %}">
+        <label for="password" class="col-xs-2 control-label">Password</label>
+        <div class="col-xs-10">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+            {% if errors.first('password') %}<span class="label label-danger">{{ errors.first('password') }}</span>{% endif %}
         </div>
-        <div>
-            <label for="password_confirm">Confirm Password</label>
-            <input type="password" name="password_confirm" id="password_confirm">
-            {% if errors.first('password_confirm') %}{{ errors.first('password_confirm') }}{% endif %}
+    </div>
+    <div class="form-group{% if errors.first('password_confirm') %} has-error{% endif %}">
+        <label for="password_confirm" class="col-xs-2 control-label">Confirm Password</label>
+        <div class="col-xs-10">
+            <input class="form-control" type="password" name="password_confirm" id="password_confirm" placeholder="Confirm password">
+            {% if errors.first('password_confirm') %}<span class="label label-danger">{{ errors.first('password_confirm') }}</span>{% endif %}
         </div>
-        <div>
-            <input type="submit" value="Register">
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-default">Register</button>
         </div>
-    </form>
+    </div>
+</form>
+
+{% endblock %}
