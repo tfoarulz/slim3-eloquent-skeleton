@@ -8,12 +8,14 @@ This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akr
 2. `$ cd my-app`
 3. `$ cp app/settings.php.dist app/settings'
 4. Change database setting in `app/settings.php`
-5. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
+5. `$ composer install`
+6. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
 
-If you get warnings during the about step. It means the DB migration is not successful, you may need to clear the database and do the DB initialization manually with this command `$ mysql -u DBUSER -p DBNAME < data/init_data.sql` (replace _DBUSER_ and _DBNAME_ with your choice).
+If you get warnings during the step 5 & 6. It means the DB migration is not successful, you may need to clear the database and do the DB initialization manually with this command `$ mysql -u DBUSER -p DBNAME < data/init_data.sql` (replace _DBUSER_ and _DBNAME_ with your choice).
 
-6. `$ php -S 0.0.0.0:8888 -t public public/index.php`
-7. Browse to http://localhost:8888
+7. `$ mkdir -m 1777 cache log`
+8. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+9. Browse to http://localhost:8888
 
 ## Key directories
 

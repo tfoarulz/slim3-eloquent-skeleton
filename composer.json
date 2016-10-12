@@ -1,14 +1,14 @@
 {
-    "name": "mrcoco/slim3-eloquent-skeleton",
-    "description": "Simple Slim Framework 3 skeleton with scaffold tool, migrations,Twig,eloquent & Monolog.",
+    "name": "tfoarulz/slim3-eloquent-skeleton",
+    "description": "Simple Slim Framework 3 skeleton with scaffold tool, migrations, Twig, eloquent & Monolog.",
     "license": "BSD-3-Clause",
     "type": "project",
-    "keywords": ["slim-framework", "skeleton","auth","csfr","eloquent","console","cli-tool","migration","scaffold"],
+    "keywords": ["slim-framework", "skeleton", "auth", "csrf", "eloquent", "console", "cli-tool", "migration", "scaffold"],
     "authors": [
         {
-            "name": "Dwi Agus",
-            "email": "dwiagus@cempakaweb.com",
-            "homepage": "http://cempakaweb.com"
+            "name": "KKK",
+            "email": "tfoa2046@gmail.com",
+            "homepage": "https://github.com/tfoarulz/"
         }
     ],
     "autoload": {
