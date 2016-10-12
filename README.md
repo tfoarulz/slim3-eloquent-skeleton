@@ -13,7 +13,7 @@ This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akr
 
 If you get warnings during the step 5 & 6. It means the DB migration is not successful, you may need to clear the database and do the DB initialization manually with this command `$ mysql -u DBUSER -p DBNAME < data/init_data.sql` (replace _DBUSER_ and _DBNAME_ with your choice).
 
-7. `$ mkdir -m 1777 cache log`
+7. `$ mkdir -m 777 cache log`
 8. `$ php -S 0.0.0.0:8888 -t public public/index.php`
 9. Browse to http://localhost:8888
 
