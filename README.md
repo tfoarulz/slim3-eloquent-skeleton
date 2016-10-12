@@ -2,18 +2,18 @@
 
 This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akrabat/slim3-skeleton that includes scaffold tool, migrations, auth, Twig, Flash messages, eloquent ORM and Monolog.
 
-## Create your project:
+## Installation
 
-    $ composer create-project -n -s dev tfoarulz/slim3-eloquent-skeleton my-app
+1. `$ git clone https://github.com/tfoarulz/slim3-eloquent-skeleton my-app`
+2. `$ cd my-app`
+3. `$ cp app/settings.php.dist app/settings'
+4. Change database setting in `app/settings.php`
+5. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
 
-### Run it:
+If you get warnings during the about step. It means the DB migration is not successful, you may need to clear the database and do the DB initialization manually with this command `$ mysql -u DBUSER -p DBNAME < data/init_data.sql` (replace _DBUSER_ and _DBNAME_ with your choice).
 
-1. `$ cd my-app`
-2. `$ cp app\settings.php.dist app\settings'
-3. Change database setting `app\settings.php`
-4. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
-5. `$ php -S 0.0.0.0:8888 -t public public/index.php`
-6. Browse to http://localhost:8888
+6. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+7. Browse to http://localhost:8888
 
 ## Key directories
 
@@ -73,3 +73,4 @@ This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akr
 1. `admin` username: `admin@slim.dev` password: `password` 
 2. `moderator` username: `moderator@slim.dev` password: `password` 
 3. `user` username: `user@slim.dev` password: `password` 
+
