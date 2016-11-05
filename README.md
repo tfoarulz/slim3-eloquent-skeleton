@@ -6,7 +6,7 @@ This project is based on mrcoco/slim3-eloquent-skeleton which is forked from akr
 
 1. `$ git clone https://github.com/tfoarulz/slim3-eloquent-skeleton my-app`
 2. `$ cd my-app`
-3. `$ cp app/settings.php.dist app/settings'
+3. `$ cp app/settings.php.dist app/settings.php`
 4. Change database setting in `app/settings.php`
 5. `$ composer install`
 6. `$ vendor/davedevelopment/phpmig/bin/phpmig migrate`
